@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ueditor demo</title>
+</head>
+
+<body>
+<!-- 加载编辑器的容器 -->
+<h1>类型:推荐</h1>
+图文标题
+<input type="text">
+<script id="container" name="content" type="text/plain" style="height:500px">
+    </script>
+<button>保存</button>
+<!-- 配置文件 -->
+<script type="text/javascript" src="js/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="js/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container');
+</script>
+</body>
+
+</html>

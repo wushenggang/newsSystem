@@ -1,0 +1,18 @@
+$(document).ready(function(){
+    $('#recommend-page').css('display','none');
+    $('#entry-1').on('click',function(){
+        $('#recommend-news').css('display','block');
+        $('#recommend-news').siblings().css('display','none');
+    });
+    $('#entry-2').on('click',function(){
+        $('#science-news').css({'display':'block'});
+        $('#science-news').siblings().css({'display':'none'});
+    });
+    $('#entry-3').on('click',function(){
+        $('#nba-news').css('display','block');
+        $('#nba-news').siblings().css('display','none');
+    });
+    $("#recommend-entry-btn").on('click',function(){
+        $("#recommend-page").css('display','block');
+    })
+})
