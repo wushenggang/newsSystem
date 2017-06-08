@@ -7,7 +7,16 @@ var bodyParser = require('body-parser');
 var mysql=require('mysql');
 var url=require('url');
 var urlencodedParser=bodyParser.urlencoded({extended:false});
+var logger=require('morgan');
+var session=require('express-session');
+var cookieParser=require('cookie-parser');
 var app = express();
+app.use(cookieParser());
+app.use(session({
+    resave:true,
+    saveUninitialized:false,
+    secret:'wsg'
+}))
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -55,55 +64,83 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function (req, re
 
 //后台管理页面
 app.get('/backstage',function(req,res){
-    fs.readFile('../../html/index.html',function(err,file){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(file);
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/index.html', function (err, file) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(file);
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 });
 
 //进入后台管理系统新闻列表页
 app.get('/recommend-detail',function(req,res){
-    fs.readFile('../../html/recommend-detail.html',function(err,rs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(rs);
-        }
-    });
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-detail.html', function (err, rs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(rs);
+            }
+        });
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-detail',function(req,res){
-    fs.readFile('../../html/science-detail.html',function(err,rs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(rs);
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-detail.html', function (err, rs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(rs);
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get('/nba-detail',function(req,res){
-    fs.readFile('../../html/nba-detail.html',function(err,rs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(rs);
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-detail.html', function (err, rs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(rs);
+            }
+        })
+    }else{
+        res.redirect('/login')
+    }
 })
 
 
 
 //进入录入页面
 app.get('/recommend-entry', function (req, res) {
-    res.render('recommend-entry.html');
+    if(req.session.user) {
+        res.render('recommend-entry.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry',function(req,res){
-    res.render('science-entry.html');
+    if(req.session.user) {
+        res.render('science-entry.html');
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get('/nba-entry',function(req,res){
-    res.render('nba-entry.html');
+    if(req.session.user) {
+        res.render('nba-entry.html');
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -1449,31 +1486,67 @@ app.post('/select-recommend-entry-9',urlencodedParser,function(req,res){
 
 //recommend-detail的修改页面
 app.get('/recommend-entry-1',function(req,res){
-    res.render('recommend-entry-1.html');
+    if(req.session.user) {
+        res.render('recommend-entry-1.html');
+    }else{
+        res.redirect('/login')
+    }
 });
 app.get('/recommend-entry-2',function(req,res){
-    res.render('recommend-entry-2.html');
+    if(req.session.user) {
+        res.render('recommend-entry-2.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-3',function(req,res){
-    res.render('recommend-entry-3.html');
+    if(req.session.user) {
+        res.render('recommend-entry-3.html');
+    }else{
+    res.redirect('/login');
+}
 });
 app.get('/recommend-entry-4',function(req,res){
-    res.render('recommend-entry-4.html');
+    if(req.session.user) {
+        res.render('recommend-entry-4.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-5',function(req,res){
-    res.render('recommend-entry-5.html');
+    if(req.session.user) {
+        res.render('recommend-entry-5.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-6',function(req,res){
-    res.render('recommend-entry-6.html');
+    if(req.session.user) {
+        res.render('recommend-entry-6.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-7',function(req,res){
-    res.render('recommend-entry-7.html');
+    if(req.session.user) {
+        res.render('recommend-entry-7.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-8',function(req,res){
-    res.render('recommend-entry-8.html');
+    if(req.session.user) {
+        res.render('recommend-entry-8.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/recommend-entry-9',function(req,res){
-    res.render('recommend-entry-9.html');
+    if(req.session.user) {
+        res.render('recommend-entry-9.html');
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -1527,31 +1600,67 @@ app.post('/select-science-entry-9',urlencodedParser,function(req,res){
 
 //science-detail的修改页面
 app.get('/science-entry-1',function(req,res){
-    res.render('science-entry-1.html');
+    if(req.session.user) {
+        res.render('science-entry-1.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-2',function(req,res){
-    res.render('science-entry-2.html');
+    if(req.session.user) {
+        res.render('science-entry-2.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-3',function(req,res){
-    res.render('science-entry-3.html');
+    if(req.session.user){
+        res.render('science-entry-3.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-4',function(req,res){
-    res.render('science-entry-4.html');
+    if(req.session.user) {
+        res.render('science-entry-4.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-5',function(req,res){
-    res.render('science-entry-5.html');
+    if(req.session.user) {
+        res.render('science-entry-5.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-6',function(req,res){
-    res.render('science-entry-6.html');
+    if(req.session.user) {
+        res.render('science-entry-6.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-7',function(req,res){
-    res.render('science-entry-7.html');
+    if(req.session.user) {
+        res.render('science-entry-7.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-8',function(req,res){
-    res.render('science-entry-8.html');
+    if(req.session.user) {
+        res.render('science-entry-8.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/science-entry-9',function(req,res){
-    res.render('science-entry-9.html');
+    if(req.session.user) {
+        res.render('science-entry-9.html');
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -1603,36 +1712,69 @@ app.post('/select-nba-entry-9',urlencodedParser,function(req,res){
 
 //nba-detail的修改页面
 app.get('/nba-entry-1',function(req,res){
-    res.render('nba-entry-1.html');
+    if(req.session.user) {
+        res.render('nba-entry-1.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-2',function(req,res){
-    res.render('nba-entry-2.html');
+    if(req.session.user) {
+        res.render('nba-entry-2.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-3',function(req,res){
-    res.render('nba-entry-3.html');
+    if(req.session.user) {
+        res.render('nba-entry-3.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-4',function(req,res){
-    res.render('nba-entry-4.html');
+    if(req.session.user) {
+        res.render('nba-entry-4.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-5',function(req,res){
-    res.render('nba-entry-5.html');
+    if(req.session.user) {
+        res.render('nba-entry-5.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-6',function(req,res){
-    res.render('nba-entry-6.html');
+    if(req.session.user) {
+        res.render('nba-entry-6.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-7',function(req,res){
-    res.render('nba-entry-7.html');
+    if(req.session.user) {
+        res.render('nba-entry-7.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-8',function(req,res){
-    res.render('nba-entry-8.html');
+    if(req.session.user) {
+        res.render('nba-entry-8.html');
+    }else{
+        res.redirect('/login');
+    }
 });
 app.get('/nba-entry-9',function(req,res){
-    res.render('nba-entry-9.html');
+    if(req.session.user) {
+        res.render('nba-entry-9.html');
+    }else{
+        res.redirect('/login');
+    }
 })
 
-app.listen(8888, function () {
-    console.log('app listen : 8888');
-});
 
 
 
@@ -1641,94 +1783,134 @@ app.listen(8888, function () {
 
 //进入评论recommend板块的正常评论审核页面
 app.get("/recommend-normal-comment-review",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-1",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login')
+    }
 })
 app.get("/recommend-normal-comment-review-2",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-3",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-4",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-5",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-6",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-7",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-8",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-normal-comment-review-9",function(req,res){
-    fs.readFile('../../html/recommend-normal-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-normal-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -1736,94 +1918,134 @@ app.get("/recommend-normal-comment-review-9",function(req,res){
 
 //进入评论science板块的正常评论审核页面
 app.get("/science-normal-comment-review",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-1",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-2",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-3",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-4",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-5",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-6",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-7",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-8",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-normal-comment-review-9",function(req,res){
-    fs.readFile('../../html/science-normal-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-normal-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -1835,178 +2057,254 @@ app.get("/science-normal-comment-review-9",function(req,res){
 
 //进入评论nba板块的正常评论审核页面
 app.get("/nba-normal-comment-review",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-1",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-2",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-3",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-4",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-5",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-6",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-7",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-8",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-normal-comment-review-9",function(req,res){
-    fs.readFile('../../html/nba-normal-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-normal-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
 //进入评论recommend板块的回收站的审核页面
 app.get("/recommend-recycle-comment-review-1",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-2",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-3",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-4",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-5",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-6",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-7",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-8",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/recommend-recycle-comment-review-9",function(req,res){
-    fs.readFile('../../html/recommend-recycle-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/recommend-recycle-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -2020,85 +2318,121 @@ app.get("/recommend-recycle-comment-review-9",function(req,res){
 
 //进入评论science板块的回收站的审核页面
 app.get("/science-recycle-comment-review-1",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-2",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-3",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-4",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-5",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-6",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-7",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-8",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/science-recycle-comment-review-9",function(req,res){
-    fs.readFile('../../html/science-recycle-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/science-recycle-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -2113,85 +2447,121 @@ app.get("/science-recycle-comment-review-9",function(req,res){
 
 //进入评论nba板块的回收站的审核页面
 app.get("/nba-recycle-comment-review-1",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-1.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-1.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-2",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-2.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-2.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-3",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-3.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-3.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-4",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-4.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-4.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-5",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-5.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-5.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-6",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-6.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-6.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-7",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-7.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-7.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-8",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-8.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-8.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 app.get("/nba-recycle-comment-review-9",function(req,res){
-    fs.readFile('../../html/nba-recycle-comment-review-9.html',function(err,fs){
-        if(err){
-            console.log(err);
-        }else{
-            res.end(fs.toString());
-        }
-    })
+    if(req.session.user) {
+        fs.readFile('../../html/nba-recycle-comment-review-9.html', function (err, fs) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.end(fs.toString());
+            }
+        })
+    }else{
+        res.redirect('/login');
+    }
 })
 
 
@@ -2777,6 +3147,32 @@ app.post('/save-nba-normal-9',urlencodedParser,function(req,res){
 
 
 
+//进入后台登录页面
+app.get('/login',function(req,res){
+    if(req.session.user) {
+        res.render('login', {tip: ''})
+    }else{
+        if(req.session.visited){
+            res.render('login',{tip:'请输入正确信息'});
+        }else{
+            res.render('login',{tip:''});
+        }
+    }
+})
+app.post('/login',urlencodedParser,function(req,res){
+if(req.body.username=='wsg'&&req.body.password=='wsgwsg'){
+    var user={'username':'wsg'};
+    req.session.user=user;
+    res.redirect('/backstage')
+}else{
+    var visited={isVisited:true};
+    req.session.user=null;
+    req.session.visited=visited;
+res.redirect('/login');
+}
+})
+
+
 //后台连接数据库删除评论操作
 function deleteMysqlComment(tableName,param){
     var connection=mysql.createConnection({
@@ -3053,6 +3449,9 @@ function selectOneNews(tableName,param,res){
 
 
 
+app.listen(8888, function () {
+    console.log('app listen : 8888');
+});
 
 
 module.exports = app;
