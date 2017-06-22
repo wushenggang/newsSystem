@@ -34722,6 +34722,7 @@ var CommentBox = _react2.default.createClass({
     },
     loadNewsFromServer: function loadNewsFromServer() {
         var id1 = localStorage.getItem('recommend-entry-1');
+        console.log(id1);
         $.ajax({
             url: this.props.newsurl,
             data: { id: id1 },

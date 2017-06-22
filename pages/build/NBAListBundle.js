@@ -35186,6 +35186,18 @@ var App = _react2.default.createClass({
                 });
             }
         });
+        $.ajax({
+            url: that.props.idUrl,
+            success: function success(data) {
+                data = JSON.parse(data);
+                for (var i = 0, j = 1; i < 50; i++, j++) {
+                    localStorage.setItem('nba-entry-' + j, data[i].id);
+                }
+            },
+            error: function error(xhr, status, err) {
+                console.log(err);
+            }
+        });
     },
     componentDidMount: function componentDidMount() {
         this.loadDataFromServer();
@@ -35326,7 +35338,7 @@ var App = _react2.default.createClass({
     }
 
 });
-_reactDom2.default.render(_react2.default.createElement(App, { url: '/newsList-nba' }), document.getElementById("content"));
+_reactDom2.default.render(_react2.default.createElement(App, { url: '/newsList-nba', idUrl: '/newsList-nba' }), document.getElementById("content"));
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(81)))
 
 /***/ })

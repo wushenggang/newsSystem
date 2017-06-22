@@ -45,6 +45,18 @@ var App=React.createClass({
                 });
             }
         });
+        $.ajax({
+           url:that.props.idUrl,
+            success:function(data){
+               data=JSON.parse(data);
+                for(var i=0,j=1;i<50;i++,j++){
+                    localStorage.setItem('recommend-entry-'+j,data[i].id);
+                }
+            },
+            error:function(xhr,status,err){
+                console.log(err);
+            }
+        });
     },
     componentDidMount:function(){
         this.loadDataFromServer();
@@ -153,6 +165,6 @@ var App=React.createClass({
 
 });
 ReactDOM.render(
-    <App url="/newsList-recommend"/>,
+    <App url="/newsList-recommend" idUrl="/newsList-recommend" />,
     document.getElementById("content")
 );

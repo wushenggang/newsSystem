@@ -1318,7 +1318,7 @@ app.post('/news_comment_nba_9',function(req,res){
 
 
 //查询recommend-news页面的详情消息
-app.get('/select-recommend-newsDetail-1',urlencodedParser,function(req,res){
+app.get('/select-recommend-newsDetail-1',function(req,res){
     var param=[req.query.id];
     selectMysqloneData('news_recommend',param,res);
 });
