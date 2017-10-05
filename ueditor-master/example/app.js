@@ -3449,8 +3449,8 @@ function selectOneNews(tableName,param,res){
 
 
 
-app.listen(80, function () {
-    console.log('app listen : 80');
+app.listen(8080, function () {
+    console.log('app listen : 8080');
 });
 
 
