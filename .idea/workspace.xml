@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48e536b-4551-4efa-bab2-9c9964e0529c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-1.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-2.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-3.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-4.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-5.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-6.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/nba-entry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-1.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-2.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-3.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-4.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-5.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-6.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-7.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-8.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-9.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-1.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-2.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-3.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-4.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-5.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-6.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-7.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-8.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-9.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/views/science-entry.html" afterPath="$PROJECT_DIR$/ueditor-master/example/views/science-entry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ueditor-master/example/app.js" afterPath="$PROJECT_DIR$/ueditor-master/example/app.js" />
     </list>
     <ignored path="newsSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,116 +30,28 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ueditor-master/example/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="3165" column="28" selection-start-line="3165" selection-start-column="19" selection-end-line="3165" selection-end-column="28" />
+            <state relative-caret-position="541">
+              <caret line="3452" column="32" selection-start-line="3452" selection-start-column="32" selection-end-line="3452" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="142" column="45" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="45" />
-              <folding>
-                <marker date="1496907783000" expanded="true" signature="10487:10582" ph="..." />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nba-entry.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry.html">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
-              <folding>
-                <marker date="1497150186000" expanded="true" signature="16716:16811" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-entry-5.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-              <folding>
-                <marker date="1497151108000" expanded="true" signature="17626:17721" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-entry-6.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-              <folding>
-                <marker date="1497151233000" expanded="true" signature="17624:17719" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-entry-7.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-              <folding>
-                <marker date="1497151508000" expanded="true" signature="17624:17719" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-entry-8.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-              <folding>
-                <marker date="1497151668000" expanded="true" signature="17624:17719" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-entry-9.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2440">
-              <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-              <folding>
-                <marker date="1497151839000" expanded="true" signature="17624:17719" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1496906805000" expanded="true" signature="10753:10858" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nba-detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/nba-detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -192,7 +75,6 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/html/login.html" />
-        <option value="$PROJECT_DIR$/ueditor-master/example/app.js" />
         <option value="$PROJECT_DIR$/ueditor-master/example/views/login.html" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/ueditor-master/example/views/recommend-entry.html" />
@@ -225,6 +107,9 @@
         <option value="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html" />
         <option value="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html" />
         <option value="$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html" />
+        <option value="$PROJECT_DIR$/ueditor-master/example/app.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -236,16 +121,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/pages/node_modules" />
-    <handled-path value="$PROJECT_DIR$/ueditor-master/example/node_modules" />
-    <handled-path value="$PROJECT_DIR$/ueditor-master/node_modules" />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="152" />
-    <option name="y" value="93" />
-    <option name="width" value="1280" />
-    <option name="height" value="675" />
+    <option name="x" value="137" />
+    <option name="y" value="50" />
+    <option name="width" value="1440" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -273,7 +153,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -390,10 +269,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../学习/demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -450,7 +330,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="152" y="93" width="1280" height="675" extended-state="0" />
+    <frame x="137" y="50" width="1440" height="803" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -488,6 +368,81 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2130">
+          <caret line="142" column="45" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4425">
+          <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4455">
+          <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4455">
+          <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4455">
+          <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4455">
+          <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/nba-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38415">
@@ -500,9 +455,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
           <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-          <folding>
-            <marker date="1496907783000" expanded="true" signature="10487:10582" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -513,7 +466,6 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1496906805000" expanded="true" signature="10753:10858" ph="..." />
           </folding>
         </state>
       </provider>
@@ -539,30 +491,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="63" column="49" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1496842964000" expanded="true" signature="7570:7672" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="705">
           <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
           <folding>
             <element signature="n#style#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1496906805000" expanded="true" signature="10753:10858" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ueditor-master/example/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="3165" column="28" selection-start-line="3165" selection-start-column="19" selection-end-line="3165" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,9 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="280" column="34" selection-start-line="280" selection-start-column="34" selection-end-line="280" selection-end-column="34" />
-          <folding>
-            <marker date="1497146526000" expanded="true" signature="17881:17976" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,9 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="169" column="65" selection-start-line="169" selection-start-column="33" selection-end-line="169" selection-end-column="65" />
-          <folding>
-            <marker date="1497109438000" expanded="true" signature="16823:16918" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497146887000" expanded="true" signature="17648:17743" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -600,9 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497147134000" expanded="true" signature="17648:17743" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,9 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497147348000" expanded="true" signature="17647:17742" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,9 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497147565000" expanded="true" signature="17647:17742" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,9 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497147741000" expanded="true" signature="17647:17742" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,9 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497147901000" expanded="true" signature="17647:17742" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
-          <folding>
-            <marker date="1497148338000" expanded="true" signature="17034:17129" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,9 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497148529000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,9 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497148126000" expanded="true" signature="17647:17742" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,9 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497146731000" expanded="true" signature="17682:17777" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,9 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497148836000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,9 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497149003000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,9 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497149170000" expanded="true" signature="17794:17889" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,9 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497149472000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -730,9 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497149613000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497149941000" expanded="true" signature="17640:17735" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,9 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497149782000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,19 +642,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="296" column="48" selection-start-line="296" selection-start-column="48" selection-end-line="296" selection-end-column="48" />
-          <folding>
-            <marker date="1497148686000" expanded="true" signature="17639:17734" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="2130">
           <caret line="142" column="45" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="45" />
-          <folding>
-            <marker date="1496907783000" expanded="true" signature="10487:10582" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,9 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497150601000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,9 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497150798000" expanded="true" signature="17779:17874" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,9 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2260">
           <caret line="298" column="48" selection-start-line="298" selection-start-column="48" selection-end-line="298" selection-end-column="48" />
-          <folding>
-            <marker date="1497150366000" expanded="true" signature="17625:17720" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,69 +678,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2230">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497150968000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="4425">
           <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
-          <folding>
-            <marker date="1497150186000" expanded="true" signature="16716:16811" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
+        <state relative-caret-position="4455">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497151108000" expanded="true" signature="17626:17721" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="4455">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497151233000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="4455">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497151508000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-8.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="4455">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497151668000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ueditor-master/example/views/nba-entry-9.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2440">
+        <state relative-caret-position="652">
           <caret line="297" column="48" selection-start-line="297" selection-start-column="48" selection-end-line="297" selection-end-column="48" />
-          <folding>
-            <marker date="1497151839000" expanded="true" signature="17624:17719" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ueditor-master/example/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="3452" column="32" selection-start-line="3452" selection-start-column="32" selection-end-line="3452" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
